@@ -1,0 +1,31 @@
+---
+interface Props {
+  title?: string;
+  href: string;
+  buttonText: string;
+  description?: string;
+  highlight?: boolean;
+}
+
+const { title, href, buttonText, description, highlight } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "group flex flex-col gap-3 text-center border-l-3 border-cyan rounded-xs px-4 py-6 bg-neon-dark transition-all hover:bg-neon-light hover:shadow-sm",
+  ]}
+>
+  {title && <div class="text-cyan font-bold text-md">{title}</div>}
+  <div class="flex justify-center">
+    <div
+      class:list={[
+        "px-8 py-2 text-cyan rounded-xs group-hover:text-white bg-neon-medium group-hover:bg-neon-glow border-cyan border-1 transition-all",
+        highlight && "animate-pulse",
+      ]}
+    >
+      {buttonText}
+    </div>
+  </div>
+  {description && <p>{description}</p>}
+</a>
