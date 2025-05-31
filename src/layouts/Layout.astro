@@ -26,35 +26,41 @@ import logo from "./_img/logo.png";
     <meta name="apple-mobile-web-app-title" content="Cotton Rust" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
-  <body class="bg-black-80 py-12">
-   
-    <!-- Main Content -->
-    <div class="container p-4 mx-auto max-w-screen-sm bg-black-80 border-1 border-cyan shadow-lg">
-      <header class="flex flex-col items-center gap-2 text-center border-b border-cyan pb-4 mb-10">
-        <div class="flex justify-center">
-          <img src={logo.src} alt="Cotton Rust logo" class="fit-contain" />
-        </div>
-        <div class="flex flex-col items-center">
-          <h1 class="text-cyan text-3xl animate-flicker text-shadow-glow tracking-wider">
-            COTTON RUST
-          </h1>
-          <p>official links</p>
-        </div>
-      </header>
-
-      <main>
-        <slot />
-      </main>
-
-      <footer class="flex justify-center pt-10 pb-6">
-        <div
-          class="text-sm text-gray-medium rounded-full px-4 py-2 border-1 border-neon-glow"
+  <body>
+    <div class="bg-black-75 p-2 md:p-0 md:py-12">
+      <!-- Main Content -->
+      <div
+        class="container p-4 mx-auto max-w-screen-sm bg-black-75 border-1 border-cyan shadow-lg"
+      >
+        <header
+          class="flex flex-col items-center gap-2 text-center border-b border-cyan pb-4 mb-10"
         >
-          宇宙で会おう、カ​​ウボーイ
-        </div>
-      </footer>
-    </div>
+          <div class="flex justify-center">
+            <img src={logo.src} alt="Cotton Rust logo" class="fit-contain" />
+          </div>
+          <div class="flex flex-col items-center">
+            <h1
+              class="text-cyan text-3xl animate-flicker text-shadow-glow tracking-wider"
+            >
+              COTTON RUST
+            </h1>
+            <p>official links</p>
+          </div>
+        </header>
 
+        <main>
+          <slot />
+        </main>
+
+        <footer class="flex justify-center pt-10 pb-6">
+          <div
+            class="text-sm text-gray-medium rounded-full px-4 py-2 border-1 border-neon-glow"
+          >
+            宇宙で会おう、カ​​ウボーイ
+          </div>
+        </footer>
+      </div>
+    </div>
     <script>
       // Mobile-friendly glitch effects
       function createNoiseBurst() {
